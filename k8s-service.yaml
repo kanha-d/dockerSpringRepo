@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service # Kubernetes resource kind we are creating
+metadata:
+  name: spring-boot-service
+spec:
+  selector:
+    app: spring-boot
+  ports:
+    - protocol: "TCP"
+      port: 9090
+      targetPort: 9090
+  type: NodePort
